@@ -1,0 +1,353 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+/*Estilo TulFlix*/
+
+
+/* Box */
+
+#thumbnails {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-align-items: stretch;
+  -webkit-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /*background: #202024;*/
+}
+
+  #thumbnails .box {
+    margin: 0 0.25em 1em 0.25em;
+    width: 30%;
+  }
+
+  #thumbnails2 {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-align-items: stretch;
+    -webkit-align-items: stretch;
+    -ms-align-items: stretch;
+    align-items: stretch;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /*background: #202024;*/
+  }
+  
+    #thumbnails2 .box {
+      margin: 0 0.25em 1em 0.25em;
+      width: 30%;
+    }
+/* Box */
+
+.box {
+  border-radius: 4px;
+  margin-bottom: 2em;
+  background: #2c2c32;
+  text-align: center;
+}
+
+  .box > :last-child,
+  .box > :last-child > :last-child,
+  .box > :last-child > :last-child > :last-child {
+      margin-bottom: 0;
+  }
+
+  .box .image.fit {
+      margin: 0;
+  }
+
+  .box .image img {
+      border-radius: 4px 4px 0 0;
+  }
+
+  .box .inner {
+      padding: 1em;
+      width: 100% !important;
+  }
+
+  .box.alt {
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+  }
+
+/* Image */
+
+.image {
+  border-radius: 4px;
+  border: 0;
+  display: inline-block;
+  position: relative;
+}
+
+  .image img {
+    border-radius: 4px;
+    display: block;
+  }
+
+  .image.left, .image.right {
+    max-width: 40%;
+  }
+
+    .image.left img, .image.right img {
+      width: 100%;
+    }
+
+  .image.left {
+    float: left;
+    padding: 0 1.5em 1em 0;
+    top: 0.25em;
+  }
+
+  .image.right {
+    float: right;
+    padding: 0 0 1em 1.5em;
+    top: 0.25em;
+  }
+
+  .image.fit {
+    display: block;
+    margin: 0 0 2em 0;
+    width: 100%;
+  }
+
+    .image.fit img {
+      width: 100%;
+    }
+
+  .image.main {
+    display: block;
+    margin: 0 0 3em 0;
+    width: 100%;
+  }
+
+    .image.main img {
+      width: 100%;
+    }
+#main {
+  padding: 0.5em 0 0.25em 0;
+}
+
+
+#main .inner {
+  width: 95%;
+  /*max-width: 80em;*/
+  margin: 0 auto;
+}
+
+/*Fuente*/
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 1em 0;
+}
+
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.35em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+h5 {
+  font-size: 0.9em;
+}
+
+h6 {
+  font-size: 0.7em;
+}
+
+/*Fin Fuente*/
+
+/*Loading Android*/
+
+.spinner{
+  width: 100px;
+  height: 100px;
+  border-radius: 54px;
+  border: 4px solid #999;
+  position: relative;
+}
+
+.spinner:after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  border: 4px solid #fff;
+  border-radius: 54px;
+  height: 100px;
+  width: 100px;
+  clip: rect(0px, 60px, 50px, 0px);
+  
+  -moz-animation:rotate 2s;  
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  
+  -webkit-animation:rotate 2s;  
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  
+  -ms-animation:rotate 2s;  
+  -ms-animation-timing-function: linear;
+  -ms-animation-iteration-count: infinite;
+  
+  animation:rotate 2s;  
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes rotate {
+  0% {
+      -moz-transform: rotate(0deg);
+  }
+  100% {
+      -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+      -webkit-transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes rotate {
+  0% {
+      -ms-transform: rotate(0deg);
+  }
+  100% {
+      -ms-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+/*Fin Loading Android*/
+
+/*Fin Estilo TulFlix*/
