@@ -38,7 +38,7 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #1b1b1d/*222*/
 );
 
 
@@ -88,7 +88,9 @@ $colors: (
 @import "noto-sans";
 
 /*Estilo TulFlix*/
-
+.bg-dark {
+  background-color: #202024 !important;
+}
 
 /* Box */
 

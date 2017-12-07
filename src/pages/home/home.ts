@@ -15,7 +15,7 @@ export class HomePage {
   ionViewDidLoad(){
     
     $2('#thumbnails2').html('<center><div class="spinner"></div></center>');
-    
+    $2('body').css('backgroud-color','#202024');
       $2.ajax({
         type: 'POST',
         url: 'http://tulflix.tk/api/php/home.php',
