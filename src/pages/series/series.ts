@@ -29,7 +29,7 @@ export class SeriesPage {
                     //console.log(resp);
                     
                     //cantidad = resp.length;
-                    var contenido = "";
+                    var contenido = "<h5 class='titulo-scroll'>Novedades</h5><div class='scrolls'>";
                     $.each(resp,function(index){
                         contenido += '<div class="box">';
                         contenido += '<a data-url="'+resp[index].url+'" class="image fit serie"><img src="'+resp[index].image+'" alt="" /></a>';
@@ -38,6 +38,7 @@ export class SeriesPage {
                         contenido += '</div>';
                         contenido += '</div>';
                     });
+                    contenido += '</div>';
                     $('#thumbnails').html(contenido);
                     $('.spinnerCenter').remove();
                     //showBuscar();

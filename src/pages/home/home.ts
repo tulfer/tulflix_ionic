@@ -27,8 +27,6 @@ export class HomePage {
 
   ionViewDidLoad(){
     
-    //$2('#thumbnails2').html('<center><div class="spinner"></div></center>');
-    $2('body').css('backgroud-color','#202024');
       $2.ajax({
         type: 'POST',
         url: 'http://tulflix.tk/api/php/home.php',
@@ -42,8 +40,7 @@ export class HomePage {
                     //console.log(resp);
                     
                     //cantidad = resp.length;
-                    //var contenido = "<div class='scrolls'>";
-                    var contenido = "";
+                    var contenido = "<h5 class='titulo-scroll'>Novedades</h5><div class='scrolls'>";
                     $2.each(resp,function(index){
                         contenido += '<div class="box">';
                         contenido += '<a data-url="'+resp[index].url+'" class="image fit pelicula"><img src="'+resp[index].image+'" alt="" /></a>';
@@ -52,7 +49,7 @@ export class HomePage {
                         contenido += '</div>';
                         contenido += '</div>';
                     });
-                    //contenido += '</div>';
+                    contenido += '</div>';
                     $2('#thumbnails2').html(contenido);
                     $2('.spinnerCenter').remove();
                     //showBuscar();
@@ -63,19 +60,6 @@ export class HomePage {
         }
           });
 
-    }
-
-    swipeEvent(e) {
-      if(e.direction == '1'){
-         //this.navCtrl.parent.select(2);
-         this.presentLoadingDefault();
-         console.log("swipe 1");
-      }
-      else if(e.direction == '4'){
-        this.presentLoadingDefault();
-        console.log("swipe 4");
-         //this.navCtrl.parent.select(0);
-      }
     }
 
 }

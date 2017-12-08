@@ -96,37 +96,26 @@ $colors: (
   background-color: #202024 !important;
 }
 
+/*Scroll Horizontal*/
+
+.scrolls { 
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 240px;
+  width: 100%;
+  white-space:nowrap;
+  padding: 7px 0px;
+  background-color: #1b1b1d;
+} 
+
+/*Fin Scroll Horizontal*/
+
 /* Box */
 
 #thumbnails {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -moz-align-items: stretch;
-  -webkit-align-items: stretch;
-  -ms-align-items: stretch;
-  align-items: stretch;
-  -moz-justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -moz-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  /*background: #202024;*/
-}
-
-  #thumbnails .box {
-    margin: 0 0.25em 1em 0.25em;
-    max-width: 130px;
-    width: 130px;
-    max-height: 257px;
-    height: 257px;
-  }
-
-  #thumbnails2 {
+  width: 100%;
+  height: 100%;
+  /*
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -142,8 +131,21 @@ $colors: (
     -moz-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
     /*background: #202024;*/
+}
+
+  #thumbnails .box {
+    margin: 0 0.25em 1em 0.25em;
+    max-width: 130px;
+    width: 130px;
+    max-height: 227px;
+    height: 227px;
+  }
+
+  #thumbnails2 {
+    width: 100%;
+    height: 100%;
   }
   
     #thumbnails2 .box {
@@ -151,7 +153,7 @@ $colors: (
       max-width: 130px;
       width: 130px;
       max-height: 257px;
-      height: 257px;
+      height: 227px;
     }
 /* Box */
 
@@ -160,6 +162,8 @@ $colors: (
   margin-bottom: 2em;
   background: #2c2c32;
   text-align: center;
+  display: inline-block;
+  vertical-align: top;
 }
 
   .box > :last-child,
@@ -179,6 +183,20 @@ $colors: (
   .box .inner {
       padding: 7px;
       width: 100% !important;
+      /*display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -moz-align-items: stretch;
+      -webkit-align-items: stretch;
+      -ms-align-items: stretch;
+      align-items: stretch;
+      -moz-justify-content: center;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;*/
+      word-wrap: break-word;
+      overflow-x: hidden;
   }
 
   .box.alt {
@@ -254,6 +272,10 @@ $colors: (
 
 /*Fuente*/
 
+.titulo-scroll{
+  padding: 10px 15px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-weight: 400;
@@ -283,7 +305,7 @@ h5 {
 }
 
 h6 {
-  font-size: 0.8em !important;
+  font-size: 1em !important;
 }
 
 /*Fin Fuente*/
@@ -314,15 +336,5 @@ ion-spinner svg {
 
 /*Fin Loading Android*/
 
-/*Scroll Horizontal*/
 
-.scrolls { 
-  overflow-x: scroll;
-  overflow-y: hidden;
-  height: 258px;
-  width: 100%;
-  white-space:nowrap
-} 
-
-/*Fin Scroll Horizontal*/
 /*Fin Estilo TulFlix*/
