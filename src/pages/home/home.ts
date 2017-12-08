@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import * as $2 from 'jquery';
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 
 @Component({
   selector: 'page-home',
@@ -8,13 +9,25 @@ import * as $2 from 'jquery';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
 
+  }
+
+  presentLoadingDefault() {
+    let loading = this.loadingCtrl.create({
+      content: 'Sirve...'
+    });
+  
+    loading.present();
+  
+    setTimeout(() => {
+      loading.dismiss();
+    }, 3000);
   }
 
   ionViewDidLoad(){
     
-    $2('#thumbnails2').html('<center><div class="spinner"></div></center>');
+    //$2('#thumbnails2').html('<center><div class="spinner"></div></center>');
     $2('body').css('backgroud-color','#202024');
       $2.ajax({
         type: 'POST',
@@ -29,6 +42,7 @@ export class HomePage {
                     //console.log(resp);
                     
                     //cantidad = resp.length;
+                    //var contenido = "<div class='scrolls'>";
                     var contenido = "";
                     $2.each(resp,function(index){
                         contenido += '<div class="box">';
@@ -38,8 +52,9 @@ export class HomePage {
                         contenido += '</div>';
                         contenido += '</div>';
                     });
+                    //contenido += '</div>';
                     $2('#thumbnails2').html(contenido);
-                    
+                    $2('.spinnerCenter').remove();
                     //showBuscar();
                 }else{
                     $2('#thumbnails2').html('Error al Obtener contenido');
@@ -50,6 +65,17 @@ export class HomePage {
 
     }
 
-  
+    swipeEvent(e) {
+      if(e.direction == '1'){
+         //this.navCtrl.parent.select(2);
+         this.presentLoadingDefault();
+         console.log("swipe 1");
+      }
+      else if(e.direction == '4'){
+        this.presentLoadingDefault();
+        console.log("swipe 4");
+         //this.navCtrl.parent.select(0);
+      }
+    }
 
 }

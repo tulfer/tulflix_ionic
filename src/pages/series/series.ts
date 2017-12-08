@@ -14,7 +14,7 @@ export class SeriesPage {
   
   ionViewDidLoad(){
     
-    $('#thumbnails').html('<center><div class="spinner"></div></center>');
+    //$('#thumbnails').html('<center><div class="spinner"></div></center>');
     
       $.ajax({
         type: 'POST',
@@ -39,7 +39,7 @@ export class SeriesPage {
                         contenido += '</div>';
                     });
                     $('#thumbnails').html(contenido);
-                    
+                    $('.spinnerCenter').remove();
                     //showBuscar();
                 }else{
                     $('#thumbnails').html('Error al Obtener contenido');
