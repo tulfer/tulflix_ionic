@@ -9,8 +9,8 @@ import { AboutPage } from '../pages/about/about';
 import { AnimePage } from '../pages/anime/anime';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-
 import { SeriesPage } from '../pages/series/series';
+import { AllPelisPage } from '../pages/allpelis/allpelis';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AnimePage,
     HomePage,
     TabsPage,
-    SeriesPage
+    SeriesPage,
+    AllPelisPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AnimePage,
     HomePage,
     TabsPage,
-    SeriesPage
+    SeriesPage,
+    AllPelisPage
   ],
   providers: [
     StatusBar,
