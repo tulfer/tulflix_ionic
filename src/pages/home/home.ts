@@ -93,6 +93,55 @@ export class HomePage {
         //$2(this).append('+');
       });
 
+      $2(document).on('click', '.pelicula', function(){
+        var url = $2(this).data('url');
+        var padre = $2(this).parent();
+        var hijo = $2('div',padre);
+        var nombre = $2('h6',hijo).html();
+        var cuerpo = "";
+        cuerpo += '<div class="poptrox-overlay" style="position: fixed; left: 0px; top: 0px; z-index: 1001; width: 100%; height: 100%; text-align: center; cursor: pointer; display: block; opacity: 1;">';
+        cuerpo += '<div style="display:inline-block;height:100%;vertical-align:middle;"></div>';
+        cuerpo += '<div style="position:absolute;left:0;top:0;width:100%;height:100%;background:#000000;opacity:0.75;filter:alpha(opacity=75);"></div>';
+        cuerpo += '<div class="poptrox-popup" style="display: inline-block; vertical-align: middle; position: relative; z-index: 1003; cursor: pointer; min-width: 200px; min-height: 100px; width: 80%; height: auto;">';
+        cuerpo += '<div id="capitulos" class="pic" style="display: block; text-indent: 0px;max-height:300px;overflow-y:auto;">';
+        cuerpo += '<div class="inner">';
+        cuerpo += '<h4 class="nombre">'+nombre+'</h4>';
+        cuerpo += '</div><hr>';
+            cuerpo += '<div class="inner">';
+            cuerpo += '<a data-url="'+url+'&server=www.rapidvideo.com"><h5 class="capitulo">Servidor 1 (liviano)</h5></a>';
+            cuerpo += '</div>';
+            cuerpo += '<div class="inner">';
+            cuerpo += '<a data-url="'+url+'&server=downace.com"><h5 class="capitulo">Servidor 2 (HD)</h5></a>';
+            cuerpo += '</div>';
+            cuerpo += '<div class="inner">';
+            cuerpo += '<a data-url="'+url+'&server=openload.co"><h5 class="capitulo">Servidor 3</h5></a>';
+            cuerpo += '</div>';
+            cuerpo += '<div class="inner">';
+            cuerpo += '<a data-url="'+url+'&server=streamango.com"><h5 class="capitulo">Servidor 4</h5></a>';
+            cuerpo += '</div>';
+        cuerpo += '</div>';
+        cuerpo += '<span class="closer" style="cursor: pointer; display: block;">×</span>';
+        cuerpo += '</div>';
+        cuerpo += '</div>';
+        
+        $2('#thumbnails2').append(cuerpo);
+        
+    });
+
+    $2(document).on('click','.closer',function(){
+      hideServers();
+    });
+    
+    $2(document).on('click','.poptrox-popup',function(){
+        //console.log('no hace na');
+    });
+
+    function hideServers(){
+        $2('.poptrox-overlay').fadeOut('slow', function(){
+        
+        }).remove();
+    }
+
     }
 
 }
