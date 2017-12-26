@@ -19,5 +19,16 @@
         <ion-spinner name="crescent"></ion-spinner>
       </div>
     <!--<input type="text" class="buscar oculto" id="buscar" placeholder="Buscar..." width="100%" />-->
-    <div id="thumbnails" style="width:100%; height:100%;"> </div>
+    <div id="thumbnails" style="width:100%; height:100%;">
+      <ion-item no-lines color="oscuro">
+        <ion-icon name="pulse" item-start color="light"></ion-icon>
+        <h4 class="titulo-scroll">Novedades</h4>
+        <button class="vermas" ion-button item-end color="oscuro" (click)="openPage()">
+            <ion-icon name="infinite" color="light"></ion-icon>
+        </button>
+      </ion-item>
+  
+      <div id="contSeries" class='scrolls'></div><!--Aqui viene el contenido de las peliculas-->
+  
+    </div>
 </ion-content>
