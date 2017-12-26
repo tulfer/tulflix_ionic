@@ -161,7 +161,7 @@ $colors: (
       max-height: 257px;
       height: 227px;
     }
-    #thumbnails {
+    #thumbnails3 {
         display: -moz-flex;
         display: -webkit-flex;
         display: -ms-flex;
@@ -183,10 +183,38 @@ $colors: (
     
       #thumbnails3 .box {
         margin: 0 0.25em 1em 0.25em;
-        max-width: 130px;
-        width: 130px;
-        max-height: 227px;
-        height: 227px;
+        //max-width: 130px;
+        width: 30%;
+        //max-height: 227px;
+        //height: 227px;
+      }
+
+      #thumbnails4 {
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-align-items: stretch;
+        -webkit-align-items: stretch;
+        -ms-align-items: stretch;
+        align-items: stretch;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        -moz-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        /*background: #202024;*/
+    }
+    
+      #thumbnails4 .box {
+        margin: 0 0.25em 1em 0.25em;
+        //max-width: 130px;
+        width: 30%;
+        //max-height: 227px;
+        //height: 227px;
       }
 /* Box */
 
