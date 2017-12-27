@@ -12,6 +12,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { SeriesPage } from '../pages/series/series';
 import { AllPelisPage } from '../pages/allpelis/allpelis';
 import { AllSeriesPage } from '../pages/allseries/allseries';
+import { PlayVideoPage } from '../pages/playvideo/playvideo';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,7 +29,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     SeriesPage,
     AllPelisPage,
-    AllSeriesPage
+    AllSeriesPage,
+    PlayVideoPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     SeriesPage,
     AllPelisPage,
-    AllSeriesPage
+    AllSeriesPage,
+    PlayVideoPage
   ],
   providers: [
     StatusBar,
